@@ -1,0 +1,38 @@
+{
+  "name": "tibatest",
+  "version": "1.0.0",
+  "description": "Tecnical Test Tiba",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricardo1470/TibaTest.git"
+  },
+  "keywords": [
+    "Node",
+    "Express",
+    "EJS",
+    "PostgreSQL"
+  ],
+  "author": "Ricardo Camayo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ricardo1470/TibaTest/issues"
+  },
+  "homepage": "https://github.com/ricardo1470/TibaTest#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "http-errors": "^1.8.0",
+    "morgan": "^1.10.0",
+    "pg": "^8.7.1",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
