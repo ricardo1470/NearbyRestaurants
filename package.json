@@ -1,7 +1,7 @@
 {
-  "name": "tibatest",
+  "name": "nearbyrestaurants",
   "version": "1.0.0",
-  "description": "Tecnical Test Tiba",
+  "description": "Tecnical Test NearbyRestaurants",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ricardo1470/TibaTest.git"
+    "url": "git+https://github.com/ricardo1470/NearbyRestaurants"
   },
   "keywords": [
     "Node",
@@ -20,9 +20,9 @@
   "author": "Ricardo Camayo",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ricardo1470/TibaTest/issues"
+    "url": "https://github.com/ricardo1470/NearbyRestaurants/issues"
   },
-  "homepage": "https://github.com/ricardo1470/TibaTest#readme",
+  "homepage": "https://github.com/ricardo1470/NearbyRestaurants#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
