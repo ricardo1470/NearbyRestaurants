@@ -7,23 +7,39 @@ const cors = require('cors'); // CORS middleware for Express.
 const createError = require('http-errors'); // HTTP error handling middleware for Express.
 const path = require('path'); // import path module.
 const favicon = require('serve-favicon'); // import favicon module.
+require('dotenv').config(); // import dotenv module to load environment variables from .env file
+const { auth } = require('express-openid-connect'); // import auth middleware.
 
-const port = process.env.PORT || 9000; // port for server assignment.
+const port = process.env.PORT || 3000; // port for server assignment.
 const  routesProject = require('./routes/index'); // import routes for project.
 
 const app = express(); // create express app instance.
+
+/* consfig authentication */
+
+app.use(
+    auth({
+        authRequired: false,
+        auth0Logout: true,
+        issuerBaseURL: process.env.ISSUER_BASE_URL,
+        baseURL: process.env.BASE_URL,
+        clientID: process.env.CLIENT_ID,
+        secret: process.env.SECRET,
+    })
+);
 
 /* settings */
 app.set('views', path.join(__dirname, 'views')); // set views directory.
 app.engine('html', require('ejs').renderFile); // configured to write html tag, to be rendered with ejs
 app.set('view engine', 'ejs'); // set view engine to html.
-app.use(morgan('dev')); // use morgan middleware.
 
 /* middleware */
 app.use(cors()); // use cors middleware for Express to allow cross-origin resource sharing.
 app.use(express.json()); // use json middleware for Express to parse JSON request bodies.
 app.use(express.urlencoded({ extended: false })); // use urlencoded middleware for Express to parse URL-encoded request bodies.
 app.use(favicon(path.join(__dirname, 'public/img', 'favicon.ico'))); // use favicon middleware for Express to serve favicon file.
+app.use(morgan('dev')); // use morgan middleware.
+app.use(auth(config)); // use auth middleware to authenticate users.
 
 /* routes */
 app.use('/', routesProject); // use routes for project to set routes.

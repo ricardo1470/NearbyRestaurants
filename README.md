@@ -1,4 +1,4 @@
-> # TibaTest
+> # NearbyRestaurants
 ---
 
 <div align="center">
