@@ -2,10 +2,12 @@
 
 /* return endpoint to enter the home page */
 const getinit = (req, res) => {
-    //res.render("index.html", { title: "@Ricardo1470" });
-    //res.json("hola mundo");
-    //console.log("index");
-    res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'logged out');
+    console.log(req.oidc.isAuthenticated());
+    res.render("index.html", {
+        title: "@Ricardo1470",
+        isAuthenticated: req.oidc.isAuthenticated(),});
+    //res.send('hola mundo')
+    //res.send(req.oidc.isAuthenticated() ? 'authenticated' : 'not authenticated');
 };
 
 /* export functions*/
