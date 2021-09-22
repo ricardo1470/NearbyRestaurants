@@ -2,18 +2,16 @@
 
 /* return endpoint to enter the home page */
 const getinit = (req, res) => {
-    console.log(req.oidc.isAuthenticated());
+    console.log(req.oidc.isAuthenticated()); // confirm user is authenticated
     if(req.oidc.isAuthenticated() == true){
-        res.render("index.html", {
-            title: "@Ricardo1470",
-            isAuthenticated: req.oidc.isAuthenticated(),});
+        res.render("index.html", { // render the home page
+            title: "@Ricardo1470", // set the title
+            isAuthenticated: req.oidc.isAuthenticated(),}); // set the isAuthenticated variable
     } else {
         res.render("logout.html", {
-            title: "@Ricardo1470",
-            isAuthenticated: req.oidc.isAuthenticated(),});
+            title: "@Ricardo1470", // set the title
+            isAuthenticated: req.oidc.isAuthenticated(),}); // set the isAuthenticated variable
     }
-    //res.send('hola mundo')
-    //res.send(req.oidc.isAuthenticated() ? 'authenticated' : 'not authenticated');
 };
 
 /* export functions*/
