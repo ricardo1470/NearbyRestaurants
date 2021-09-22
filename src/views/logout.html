@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://bootswatch.com/4/superhero/bootstrap.min.css">
-    <link rel="stylesheet" href="../public/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/styles.css">
     <title><%= title %></title>
 </head>
 <body>
@@ -19,12 +19,6 @@
         </ul>
     </nav>
     <h1><%= title %></h1>
-    <p>welcome to <%= title %> </p>
-
-    <% if (isAuthenticated) { %>
-    <a href="/api/Restaurants">Restaurants</a>
-    <% } else { %>
-    <li><a href="/logout/">logout</a></li>
-    <% } %>
+    <p>welcome to <%= title %> please login to the site </p>
 </body>
 </html>

@@ -9,9 +9,11 @@ const path = require('path'); // import path module.
 var favicon = require('serve-favicon'); // import favicon module.
 require('dotenv').config(); // import dotenv module to load environment variables from .env file
 const { auth } = require('express-openid-connect'); // import auth middleware.
+ // import axios module for making HTTP requests.
 
 const port = process.env.PORT || 9000; // port for server assignment.
-const  routesProject = require('./src/routes/index'); // import routes for project.
+const routesProject = require('./src/routes/index'); // import routes for project.
+const routesApi = require('./src/routes/api'); // import routes for api project (api.js).
 
 /* consfig authentication */
 const config = {
@@ -47,9 +49,10 @@ app.use(auth(config)); // use auth middleware to authenticate users.
 
 /* routes */
 app.use('/', routesProject); // use routes for project to set routes.
+app.use('/api', routesApi); // use routes for api project to set routes.
 
 /* static files */
-app.use(express.static(path.join(__dirname, 'public'))); // serve static files from public directory.
+app.use(express.static(path.join(__dirname, 'src/public/css'))); // serve static files from public directory.
 
 
 /* start server */

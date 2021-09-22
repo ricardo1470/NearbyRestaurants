@@ -1,5 +1,18 @@
 > # NearbyRestaurants
 ---
+## Address to perform test requests for the api
+*   **`https://rapidapi.com/apidojo/api/travel-advisor/`**
+
+## Install from package.json
+* `npm i`
+
+## page with coordinates based on the geodetic system
+*   **`https://www.geodatos.net/coordenadas/`**
+
+> ## Built with
+this project was built in: `Nodejs`, `ejs`, `Express`, `AUTH0`
+
+---
 
 <div align="center">
 

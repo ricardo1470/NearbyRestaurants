@@ -1,0 +1,18 @@
+    <tbody>
+        <% for(let i = 0 ; i < data.length ; i++) { %>
+        <tr>
+            <td><%= data[i].venue.name %></td>
+            <td><%= data[i].venue.type %></td>
+        </tr>
+        <% } %>
+    </tbody>
+
+    <tbody>
+        <% for(var i = 0; i < data.length; i++) { %>
+            <tr class="table-dark">
+                <td><%= (i + 1) %></td>
+                <td><%= data[i].venue.name %></td>
+                <td><%= data[i].venue.type %></td>
+            </tr>
+        <% } %>
+    </tbody>
