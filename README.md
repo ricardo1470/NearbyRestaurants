@@ -8,9 +8,9 @@
 
 ## page with coordinates based on the geodetic system
 *   **`https://www.geodatos.net/coordenadas/`**
-    `npm run dev`
 
 ## running in development
+* `npm run dev`
 
 > ## Built with
 this project was built in: `Nodejs`, `ejs`, `Express`, `AUTH0`
