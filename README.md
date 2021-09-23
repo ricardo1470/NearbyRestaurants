@@ -1,5 +1,9 @@
 > # NearbyRestaurants
 ---
+
+![Project](https://www.code-inspector.com/project/29141/status/svg) ![Quality](https://www.code-inspector.com/project/29141/score/svg)
+
+---
 ## Address to perform test requests for the api
 *   **`https://rapidapi.com/apidojo/api/travel-advisor/`**
 
@@ -17,9 +21,9 @@ this project was built in: `Nodejs`, `ejs`, `Express`, `AUTH0`
 
 > ## CodeInspector
 
-https://www.code-inspector.com/project/29141/status/svg
 
-https://www.code-inspector.com/project/29141/score/svg
+
+
 
 ---
 

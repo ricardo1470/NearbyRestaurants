@@ -44,7 +44,9 @@ const getRestaurants = (req, res) => {
     }
 };
 
-const getLocation = (req, res) => {};
+const getLocation = (req, res) => {
+    res.send('getLocation');
+};
 
 module.exports = {
     getRestaurants,
