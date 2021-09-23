@@ -15,6 +15,12 @@
 > ## Built with
 this project was built in: `Nodejs`, `ejs`, `Express`, `AUTH0`
 
+> ## CodeInspector
+
+https://www.code-inspector.com/project/29141/status/svg
+
+https://www.code-inspector.com/project/29141/score/svg
+
 ---
 
 <div align="center">
