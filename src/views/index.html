@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://bootswatch.com/4/superhero/bootstrap.min.css">
-    <link rel="stylesheet" href="../public/css/styles.css">
+    <link rel="stylesheet" type="styles" href="../public/css/styles.css">
     <title><%= title %></title>
 </head>
 <body>
@@ -18,13 +18,40 @@
             <% } %>
         </ul>
     </nav>
-    <h1><%= title %></h1>
-    <p>welcome to <%= title %> </p>
+    <h1 class="m-4"><%= title %></h1>
+    <p class="m-4">welcome to <%= title %> </p>
 
     <% if (isAuthenticated) { %>
-    <a href="/api/Restaurants">Restaurants</a>
+    <a href="/api/Restaurants" class="m-4">Restaurants</a>
+    <!-- <div class="col-md-3 col-md-offset-2 m-4 p-4">
+        <div class="card">
+            <div class="card-body">
+                <form action="/Restaurants" method="put">
+                    <div class="form-group">
+                        <label for="Latitude">Latitude</label>
+                        <input type="text" id="Latitude" name="Latitude" placeholder="Latitude" required class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="longitude">longitude</label>
+                        <input type="text" id="longitude" name="longitude" placeholder="longitude" required class="form-control">
+                    </div>
+                    <button type="submit" id="button" class="btn btn-outline-primary">Search restaurant</button>
+                </form>
+            </div>
+        </div>
+    </div> -->
     <% } else { %>
     <li><a href="/logout/">logout</a></li>
     <% } %>
+
+    <script>
+        event.preventDefault();
+        window.document.getElementById("button").addEventListener("click", function (event) {
+            var latitude = window.document.getElementById("Latitude").value;
+            var longitude = window.document.getElementById("longitude").value;
+            var url = "/api/Restaurants?latitude=" + latitude + "&longitude=" + longitude;
+            window.location.href = url;
+        });
+    </script>
 </body>
 </html>

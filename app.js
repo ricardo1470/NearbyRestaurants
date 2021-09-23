@@ -9,7 +9,8 @@ const path = require('path'); // import path module.
 var favicon = require('serve-favicon'); // import favicon module.
 require('dotenv').config(); // import dotenv module to load environment variables from .env file
 const { auth } = require('express-openid-connect'); // import auth middleware.
- // import axios module for making HTTP requests.
+
+require('./dataBase'); // import database module.
 
 const port = process.env.PORT || 9000; // port for server assignment.
 const routesProject = require('./src/routes/index'); // import routes for project.
@@ -26,7 +27,6 @@ const config = {
 };
 
 const app = express(); // create express app instance.
-
 
 /* settings */
 app.set('views', path.join(__dirname, 'src/views')); // set views directory.

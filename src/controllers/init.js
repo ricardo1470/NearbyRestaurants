@@ -14,7 +14,13 @@ const getinit = (req, res) => {
     }
 };
 
+const getTest = (req, res) => {
+    //res.send('hola toño')
+    res.render('test.html')
+};
+
 /* export functions*/
 module.exports = {
     getinit,
+    getTest
 };
