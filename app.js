@@ -33,11 +33,6 @@ app.set('views', path.join(__dirname, 'src/views')); // set views directory.
 app.engine('html', require('ejs').renderFile); // configured to write html tag, to be rendered with ejs
 app.set('view engine', 'ejs'); // set view engine to html.
 
-if (app.get('env') === 'production') {
-    // Use secure cookies in production (requires SSL/TLS)
-    sess.cookie.secure = true;
-}
-
 /* middleware */
 app.use(cors()); // use cors middleware for Express to allow cross-origin resource sharing.
 app.use(express.json()); // use json middleware for Express to parse JSON request bodies.
