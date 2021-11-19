@@ -37,6 +37,8 @@
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.12"
+    "jest": "^27.2.5",
+    "nodemon": "^2.0.12",
+    "supertest": "^6.1.6"
   }
 }

@@ -16,7 +16,7 @@ const port = process.env.PORT || 9000; // port for server assignment.
 const routesProject = require('./src/routes/index'); // import routes for project.
 const routesApi = require('./src/routes/api'); // import routes for api project (api.js).
 
-/* consfig authentication */
+/* consfig authentication 
 const config = {
     authRequired: false,
     auth0Logout: true,
@@ -25,6 +25,7 @@ const config = {
     clientID: process.env.CLIENT_ID,
     secret: process.env.SECRET,
 };
+*/
 
 const app = express(); // create express app instance.
 
@@ -39,8 +40,7 @@ app.use(express.json()); // use json middleware for Express to parse JSON reques
 app.use(express.urlencoded({ extended: true })); // use urlencoded middleware for Express to parse URL-encoded request bodies.
 app.use(favicon(path.join(__dirname, 'src/public/img', 'favicon.ico'))); // use favicon middleware for Express to serve favicon file.
 app.use(morgan('dev')); // use morgan middleware.
-app.use(auth(config)); // use auth middleware to authenticate users.
-
+//app.use(auth(config)); // use auth middleware to authenticate users.
 
 /* routes */
 app.use('/', routesProject); // use routes for project to set routes.
